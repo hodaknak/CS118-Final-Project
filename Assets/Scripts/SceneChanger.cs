@@ -7,4 +7,8 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene("Testing Assets Scene");
     }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
