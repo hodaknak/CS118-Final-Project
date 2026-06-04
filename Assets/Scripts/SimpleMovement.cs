@@ -9,29 +9,31 @@ public class SimpleMovement : MonoBehaviour
     private float moveSpeed = 5f;
     [SerializeField]
     private float mouseSensitivity = 0.1f;
-    [SerializeField]
-    private float maxLookAngle = 90f;
 
     private CharacterController controller;
 
-    private Vector2 lookInput;
-    private float pitch = 0f;
+    private Vector2 moveInput;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         controller = GetComponent<CharacterController>();
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
-    // Update is called once per frame
-    public void OnMove(InputValue value)
+    private void Update()
     {
-        Vector2 moveInput = value.Get<Vector2>();
         Vector3 move =
             transform.right * moveInput.x +
             transform.forward * moveInput.y;
 
         controller.Move(move * moveSpeed * Time.deltaTime);
+    }
+    // Update is called once per frame
+    public void OnMove(InputValue value)
+    {
+        moveInput = value.Get<Vector2>();
     }
 
     public void OnLook(InputValue value)
@@ -45,9 +47,6 @@ public class SimpleMovement : MonoBehaviour
         transform.Rotate(Vector3.up * mouseX);
 
         // Vertical rotation (camera)
-        pitch -= mouseY;
-        pitch = Mathf.Clamp(pitch, -maxLookAngle, maxLookAngle);
-
-        cameraPivot.localRotation = Quaternion.Euler(pitch, 0f, 0f);
+        cameraPivot.Rotate(Vector3.right * mouseY * -1f);
     }
 }
