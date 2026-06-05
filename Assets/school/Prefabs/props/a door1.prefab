@@ -111,6 +111,8 @@ MonoBehaviour:
   door2: {fileID: 6616568959843236620}
   handle1: {fileID: 6055136982378531385}
   handle2: {fileID: 6838790628177620620}
+  handleRb1: {fileID: 2630601362127871666}
+  handleRb2: {fileID: 8856454087801738355}
 --- !u!1 &2088421721927260114
 GameObject:
   m_ObjectHideFlags: 0
