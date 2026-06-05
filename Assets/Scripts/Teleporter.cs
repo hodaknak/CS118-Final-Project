@@ -4,30 +4,20 @@ using UnityEngine;
 public class Teleporter : MonoBehaviour
 {
     [SerializeField]
-    private Transform otherTeleporter;
-
-    private Vector3 deltaPos;
-
-    void Start()
-    {
-        deltaPos = otherTeleporter.position - transform.position;
-    }
+    private AnomalyManager anomalyManager;
+    [SerializeField]
+    private bool front;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            other.transform.position += deltaPos;
-            // 10.25 12.5
+            if (front)
+                other.transform.position -= transform.position;
+            else
+                transform.position = new Vector3(-transform.position.x, transform.position.y, transform.position.z);
 
-            StartCoroutine(updateTag(other.gameObject));
+            anomalyManager.teleported(front);
         }
-    }
-
-    IEnumerator updateTag(GameObject other)
-    {
-        other.tag = "Untagged";
-        yield return new WaitForSeconds(2.0f);
-        other.tag = "Player";
     }
 }
