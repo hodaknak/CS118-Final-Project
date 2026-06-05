@@ -24,7 +24,7 @@ public class Anomaly : MonoBehaviour
     {
         activateAnomaly.Invoke();
 
-        if (original)
+        if (original && mirror != null)
             mirror.activate(false);
     }
 
@@ -32,7 +32,7 @@ public class Anomaly : MonoBehaviour
     {
         deactivateAnomaly.Invoke();
 
-        if (original)
+        if (original && mirror != null)
             mirror.deactivate(false);
     }
 }
