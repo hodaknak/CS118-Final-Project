@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Anchor
+  - Door
+  - Locker
+  - LockerEast
+  - Text
   layers:
   - Default
   - TransparentFX

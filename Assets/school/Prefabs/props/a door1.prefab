@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 4895514858376750}
   - component: {fileID: 684987081596905976}
   - component: {fileID: 6538410221471749377}
+  - component: {fileID: 6079821163792978479}
   m_Layer: 0
   m_Name: a door1
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -92,6 +93,24 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6079821163792978479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457838970446620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f4bc30d22c849a2985bca199954e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  rb1: {fileID: 7379775454237146645}
+  rb2: {fileID: 5971751589628363371}
+  door1: {fileID: 2235240803819730734}
+  door2: {fileID: 6616568959843236620}
+  handle1: {fileID: 6055136982378531385}
+  handle2: {fileID: 6838790628177620620}
 --- !u!1 &2088421721927260114
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,7 +217,7 @@ MeshCollider:
     m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -868,7 +887,7 @@ MeshCollider:
     m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0

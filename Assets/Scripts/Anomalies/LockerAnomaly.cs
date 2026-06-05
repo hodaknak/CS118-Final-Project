@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class LockerAnomaly : MonoBehaviour
 {
     [SerializeField]
+    private string tagName = "Locker";
     private List<Renderer> objects;
 
     private List<Material> oldMaterials;
@@ -14,6 +15,14 @@ public class LockerAnomaly : MonoBehaviour
     void OnEnable()
     {
         oldMaterials = new List<Material>();
+        objects = new List<Renderer>();
+        GameObject[] objectsArray = GameObject.FindGameObjectsWithTag(tagName);
+        foreach(GameObject o in objectsArray)
+        {
+            Renderer r = o.GetComponent<Renderer>();
+            if (r != null)
+                objects.Add(r);
+        }
 
         foreach (Renderer o in objects)
         {

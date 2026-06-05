@@ -5,7 +5,7 @@ public class SceneChanger : MonoBehaviour
 {
     public void LoadMainScene()
     {
-        SceneManager.LoadScene("Testing Assets Scene");
+        SceneManager.LoadScene("Final Hallways");
     }
     public void QuitGame()
     {

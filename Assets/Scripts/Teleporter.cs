@@ -12,6 +12,11 @@ public class Teleporter : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            GameObject[] doors = GameObject.FindGameObjectsWithTag("Door");
+            foreach (GameObject door in doors)
+            {
+                door.GetComponent<DoorResetter>().resetDoors();
+            }
             if (front)
                 other.transform.position -= new Vector3(transform.position.x, 0, transform.position.z);
             else
