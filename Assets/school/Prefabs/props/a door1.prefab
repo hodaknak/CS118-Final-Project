@@ -11,13 +11,12 @@ GameObject:
   - component: {fileID: 4895514858376750}
   - component: {fileID: 684987081596905976}
   - component: {fileID: 6538410221471749377}
-  - component: {fileID: 6068114091082510481}
   m_Layer: 0
   m_Name: a door1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4895514858376750
 Transform:
@@ -93,24 +92,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6068114091082510481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1457838970446620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c769d9d8ae4aec54b988d97998ad8620, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DoubleDoor
-  isOpen: 0
-  hingeLeft: {fileID: 5036373238754062706}
-  hingeRight: {fileID: 2282188186390395939}
-  openSpeed: 1
-  openAngle: 90
-  forwardDirection: 0
 --- !u!1 &2282188186390395939
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +141,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &3575895962339517008
 Transform:
@@ -273,7 +254,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &3575895962339517010
 Transform:

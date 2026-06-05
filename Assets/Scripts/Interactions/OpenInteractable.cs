@@ -46,7 +46,14 @@ public class OpenInteractable : SimpleVRInteractble
 
     protected override void OnVRActivate(SimpleVRInteractorContext context)
     {
-        door.Toggle();
+        if (door.isOpen)
+        {
+            door.Close();
+        }
+        else
+        {
+            door.Open(context.Position);
+        }
     }
 
     private void SetColor(Color color)
